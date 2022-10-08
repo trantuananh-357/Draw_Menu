@@ -1,0 +1,148 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 62.5%;
+	vertical-align: baseline;
+    font-family: 'Open Sans', sans-serif;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+:root{
+    --blue:rgb(86, 1, 165);
+    --box-shadow : 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/*  started */
+body{
+    background-color: var(--blue);
+    width: 100%;
+    height: 80rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.contain{
+    position: relative;
+}
+
+.contain .navigation{
+    position: relative;
+    width: 8rem;
+    background-color: #fff;
+    border: 1px solid #FFf;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.contain .navigation ul{
+    position: relative;
+    width: 100%;
+
+}
+.contain .navigation.active{
+    width: 30rem;
+}
+.contain .navigation ul li{
+    width: 100%;
+    position: relative;
+}
+.contain .navigation ul li a{
+    font-size: 4rem;
+    position: relative;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    display: flex;
+    
+}
+.contain .navigation ul li a:hover{
+    background-color: #efefef;
+    cursor: pointer;
+
+}
+
+.contain .navigation ul li a i{
+    min-width: 8rem;
+    height: 8rem;
+    align-items: center;
+    display: block;
+    line-height: 8rem;
+    text-align: center;
+   
+    justify-content: center;
+}
+.contain .navigation ul li a .title{
+    display: block;
+    position: relative;
+    text-align: center;
+    display: flex;
+   line-height: 8rem;;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.toggle{
+    background-color: #FFf;
+    width: 3rem;
+    height: 3rem;
+    border: 5px solid var(--blue);
+    border-radius: 50%;
+    position: absolute;
+    right: -2rem;
+    top: calc(50% - 2rem);
+    
+    font-weight: bold;
+
+}
+.toggle::before{
+    content: '\f054';
+    font-family: fontAwesome;
+    font-size: 2rem;
+    color: var(--blue);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 3rem;
+    position: absolute;
+}
+.toggle.active::before{
+    content: '\f053';
+}
+.toggle:hover{
+    cursor: pointer;
+}
