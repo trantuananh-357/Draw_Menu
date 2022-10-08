@@ -89,6 +89,7 @@ body{
     display: block;
     width: 100%;
     display: flex;
+	color: var(--blue);
     
 }
 .contain .navigation ul li a:hover{
